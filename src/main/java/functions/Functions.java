@@ -40,15 +40,55 @@ public class Functions {
         return true;
     }
 
+    private static String getPrimeStatus( int number ) {
+        boolean prime = isPrime( number );
+
+        if ( prime ) {
+            return  number + " is a prime.";
+        } else {
+            return number + " is not a prime.";
+        }
+    }
+
     private static void primeTest() {
         // 3 is a prime
         // 4 is not a prime
-        System.out.println( "3 is a Prime: " + isPrime(3 ) );
-        System.out.println( "4 is a Prime: " + isPrime(4 ) );
-        System.out.println( "5 is a Prime: " + isPrime(5 ) );
-        System.out.println( "15 is a Prime: " + isPrime(15 ) );
-        System.out.println( "17 is a Prime: " + isPrime( 17 ) );
+        // conditions, data types, functions, loops.
+        // for 1 - 1000, print  if the number is prime or not.
+
+        System.out.println( getPrimeStatus( 3 ) );
+        System.out.println( getPrimeStatus( 4 ) );
+
+        System.out.println( getPrimeStatus( 5 ) );
+        System.out.println( getPrimeStatus( 15 ) );
+        System.out.println( getPrimeStatus( 17 ) );
     }
+
+    /**
+     * Calculate the factors of a given number.
+     * For e.g.
+     *  if the function receives 12
+     *  1 is a factor of 12
+     *  2 is a factor of 12
+     *  3 is a factor of 12
+     *  4 is a factor of 12
+     *  6 is a factor of 12
+     *  12 is a factor of 12
+     *
+     */
+    private static void printFactors( int number ) {
+        // TODO: optimize this to not do redundant calculations.
+        for(int i =1;i<= number;i++){
+            if(number%i==0)
+                System.out.println(i + " is a factor of " + number);
+        }
+
+    }
+    private static void factorsTest(){
+        printFactors(12);
+    }
+
+
     private static int factorial( int number ) {
         // 5! = 5 * 4 * 3 * 2 * 1
         // if  we want to calculate only +ve numbers. else we return 0.
@@ -75,7 +115,8 @@ public class Functions {
         // if we want to print whether a value is even or odd.
         // evenSums();
         // calculateFactorial();
-        primeTest();
+        //primeTest();
+        factorsTest();
     }
 
     private static void evenSums() {
