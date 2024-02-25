@@ -42,14 +42,38 @@ public class Strings {
         }
     }
 
+    private static void stringOperations() {
+
+                     // 👇🏻  👇🏻 👇🏻
+        String text = "this is java";
+
+        String[] strings = text.split(" ");
+
+        // walkthrough array.
+        for ( int i = 0; i < strings.length; ++i ) {
+            System.out.println(strings[i]);
+        }
+
+        // Loop through 1..100
+        for ( int i = 1; i <= 100; i += 2) {
+            System.out.println(i);
+        }
+        // Loop back from 100 .. 1
+        for ( int i = 100; i > 0; --i ) {
+            System.out.println( i );
+        }
+    }
+
+
     public static void main(String[] args) {
 
-        splitBy( "This,is,a,text", "," );
-        splitBy( "This,is,a,text,", "," );
-        splitBy( "This|is|a|string", "," );
-        splitBy("", "," );
-        splitBy(null, ",");
-        splitBy("abc", null );
-        splitBy( null, null );
+//        splitBy( "This,is,a,text", "," );
+//        splitBy( "This,is,a,text,", "," );
+//        splitBy( "This|is|a|string", "," );
+//        splitBy("", "," );
+//        splitBy(null, ",");
+//        splitBy("abc", null );
+//        splitBy( null, null );
+        stringOperations();
     }
 }
